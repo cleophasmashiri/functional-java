@@ -16,7 +16,7 @@ public class PriceService {
 		return t;
 	}
 
-	public BigDecimal calculateFunctional(List<BigDecimal> prices) {
+	public BigDecimal calculateFunctionally(List<BigDecimal> prices) {
 		return prices.stream()
 		.filter(p -> p.compareTo(BigDecimal.valueOf(20)) > 0)
 		.map(p -> p.multiply(BigDecimal.valueOf(0.9)))
