@@ -36,7 +36,7 @@ public class PricesTest {
 
 	@Test
 	public void givenListOfPricesShouldCalcuateTotalDiscountedPriceFunctional() {
-		assertEquals(67.5, this.priceService.calculateFunctional(prices).doubleValue(), 0.001);
+		assertEquals(67.5, this.priceService.calculateFunctionally(prices).doubleValue(), 0.001);
 
 	}
 
