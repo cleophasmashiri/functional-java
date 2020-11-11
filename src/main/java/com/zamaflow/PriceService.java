@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 public class PriceService {
 
 	public BigDecimal calculate(List<BigDecimal> prices) {
-	
 		BigDecimal t = BigDecimal.ZERO;
 		for (BigDecimal p: prices) {
 			if (p.compareTo(BigDecimal.valueOf(20)) > 0) {
