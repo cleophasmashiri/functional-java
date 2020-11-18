@@ -23,13 +23,14 @@ public class Chapter3ComparatorTest {
 			new Person("John", 30),
 			new Person("Sara", 21),
 			new Person("Jane", 11),
-			new Person("Greg", 35));
+			new Person("Greg", 35),
+			new Person("Jane1", 10));
 	
 	@Test
 	public void comparatorTest() {
 		List<Person> peopleSortedAscByAge = comparatorService.sortByAgeAsc(people);
 		
-		assertEquals("Jane", peopleSortedAscByAge.get(0).getName());
+		assertEquals("Jane1", peopleSortedAscByAge.get(0).getName());
 	}
 	
 	@Test
@@ -39,5 +40,12 @@ public class Chapter3ComparatorTest {
 		assertEquals("Greg", peopleSortedAscByAge.get(0).getName());
 	}
 	
+
+	@Test
+	public void multiComparatorTest() {
+
+		List<Person> peopleSortedAscByAge = comparatorService.sortByAgeAndName(people);
+		assertEquals("Jane1", peopleSortedAscByAge.get(0).getName());
+	}
 }
 	
